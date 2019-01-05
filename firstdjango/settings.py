@@ -77,7 +77,8 @@ WSGI_APPLICATION = 'firstdjango.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'world',
+        # 'NAME': 'world',
+        'NAME': 'TEST',
         'USER' : 'root',
         'PASSWORD' : 'password',
         'HOST' : '127.0.0.1',
@@ -121,5 +122,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 STATIC_URL = '/static/'
